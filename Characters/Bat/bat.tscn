@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://dr5xia6ix67s8"]
+
+[ext_resource type="Script" path="res://Characters/Bat/bat.gd" id="1_r3y2r"]
+[ext_resource type="Texture2D" uid="uid://c3d8d3u01aewa" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Sprites/Farmer Story Sprites.png" id="2_niinx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_daxda"]
+radius = 7.0
+
+[sub_resource type="Animation" id="Animation_5xop5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(96, 0, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_ebo4x"]
+resource_name = "flying"
+length = 0.67
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.366667, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(96, 0, 16, 16), Rect2(112, 0, 16, 16), Rect2(128, 0, 16, 16), Rect2(112, 0, 16, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tsvin"]
+_data = {
+"RESET": SubResource("Animation_5xop5"),
+"flying": SubResource("Animation_ebo4x")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ioncy"]
+radius = 2.0
+height = 108.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_288p1"]
+radius = 5.05
+
+[node name="Bat" type="CharacterBody2D" groups=["Enemys"]]
+z_index = 2
+script = ExtResource("1_r3y2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_daxda")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_niinx")
+region_enabled = true
+region_rect = Rect2(96, 0, 16, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tsvin")
+}
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-1, 9)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 52)
+shape = SubResource("CapsuleShape2D_ioncy")
+
+[node name="protection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="protection"]
+shape = SubResource("CircleShape2D_288p1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

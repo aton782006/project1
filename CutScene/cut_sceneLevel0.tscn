@@ -1,0 +1,678 @@
+[gd_scene load_steps=18 format=3 uid="uid://lidl8wo3uufl"]
+
+[ext_resource type="Script" path="res://CutScene/cut_scene_level_0.gd" id="1_m7h7w"]
+[ext_resource type="FontFile" uid="uid://boktctkbl7nt2" path="res://Fonts/PixelAE-Bold.ttf" id="2_h0lim"]
+[ext_resource type="Texture2D" uid="uid://vpirmnqm4a06" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/1 Layer Field.png" id="3_g4rvl"]
+[ext_resource type="Texture2D" uid="uid://biyqtk42hp48t" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/2 Layer Field.png" id="4_grw72"]
+[ext_resource type="Texture2D" uid="uid://dvruesixvtkp0" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/3 Layer Field.png" id="5_7khlb"]
+[ext_resource type="Texture2D" uid="uid://w0xlg2gcem17" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/4 Layer Field.png" id="6_xjmuu"]
+[ext_resource type="Texture2D" uid="uid://du8neqnmm5ut0" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/5 Layer Field.png" id="7_kn3y0"]
+[ext_resource type="Texture2D" uid="uid://gi80xkk3ojrk" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Forest/1 layer Forest.png" id="8_efoyc"]
+[ext_resource type="Texture2D" uid="uid://djjpktpqnce3a" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Forest/2 layer Forest.png" id="9_ud5om"]
+[ext_resource type="Texture2D" uid="uid://18y2ojbcqyoq" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Forest/3 layer Forest.png" id="10_yy8fi"]
+[ext_resource type="Texture2D" uid="uid://c3d8d3u01aewa" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Sprites/Farmer Story Sprites.png" id="11_dbqoc"]
+[ext_resource type="AudioStream" uid="uid://bv7cfrp3p62cq" path="res://Levels/Sequence 01 (2).wav" id="12_m1tjv"]
+
+[sub_resource type="Animation" id="Animation_pj46e"]
+resource_name = "CutScene"
+length = 34.523
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/Text:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.2, 4.7, 7.4162, 12.8, 17.3, 23.7, 25.5, 27.6, 31.6, 32.2, 33.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["في يوم من الايام", "كان هناك حاكم لواحدة من الممالك القديمة", "كان محبوب الصغير قبل الكبير", "وكان لديه حارس منذ سنين ويعتبر من اعز اصدقاء الحاكم ", "ولكن في ليلة من اليالي الشتوية
+قرر مجموعة من الاعداء الهجوم على المملكة", "وقاموا بختطاف الحارس
+ونهب وسرقة جميع ممتلكات الحاكم
+بما في ذالك خرائط الحارس", "", "لكن هل تنتهي القصة ببساطة", "ام ان لفارس المملكة راي اخر", "", "ترجمة  (ZFLT)
+تدقيق وتصحيح(Mython_man)", ""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Father(TheKing:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.1, 3.7, 12.6, 13),
+"transitions": PackedFloat32Array(1, 0.435275, 0.34151, 0.34151, 1),
+"update": 0,
+"values": [Vector2(-205, 605), Vector2(-205, 605), Vector2(630, 334), Vector2(630, 334), Vector2(147, 554)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pepole2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.7, 5.2, 12.6, 13),
+"transitions": PackedFloat32Array(1, 0.217638, 1, 1, 1),
+"update": 0,
+"values": [Vector2(380, -334), Vector2(380, -334), Vector2(674, -563), Vector2(674, -563), Vector2(353, -336)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pepole3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.7, 5.7, 12.6, 13),
+"transitions": PackedFloat32Array(1, 0.225313, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1839, -215), Vector2(1839, -215), Vector2(1621, -433), Vector2(1621, -433), Vector2(1925, -194)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Garden:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 7.4, 9, 12.6, 13, 16.9, 17.2),
+"transitions": PackedFloat32Array(1, 0.105112, 0.225313, 0.225313, 1, 0.170755, 0.143587),
+"update": 0,
+"values": [Vector2(1217, -153), Vector2(1217, -153), Vector2(915, 326), Vector2(915, 326), Vector2(315, 515), Vector2(315, 515), Vector2(1119, 481)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Garden:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Wallpaper1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(13),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Wallpaper2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(13),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Enemys:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 12.7, 13.3),
+"transitions": PackedFloat32Array(1, 0.241484, 0.138696),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-774, 85)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Garden:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 16.8, 17.1),
+"transitions": PackedFloat32Array(1, 0.0603711, 0.105112),
+"update": 0,
+"values": [0.0, 0.0, -1.64613]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Panel:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.1, 23.7, 25.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Player:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.1, 27.6, 29.1, 30.8, 32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Wallpaper1:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(12.7, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Wallpaper2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(12.7, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8x3n1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/Text:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["في يوم من الايام"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Father(TheKing:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-205, 605)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pepole2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(380, -334)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("pepole3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1839, -215)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Garden:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(443, 883)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Garden:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Wallpaper1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Wallpaper2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Enemys:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Garden:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Panel:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Player:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Wallpaper1:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Wallpaper2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_77axo"]
+_data = {
+"CutScene": SubResource("Animation_pj46e"),
+"RESET": SubResource("Animation_8x3n1")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_lq8t6"]
+font = ExtResource("2_h0lim")
+font_size = 30
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8wob"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="CutScene" type="Node2D"]
+script = ExtResource("1_m7h7w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_77axo")
+}
+speed_scale = 0.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -401.0
+offset_top = -93.0
+offset_right = 337.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1, 1.01679)
+text = "في يوم من الايام"
+label_settings = SubResource("LabelSettings_lq8t6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Escape the Story btn" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 566.0
+offset_right = 1108.0
+offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("2_h0lim")
+text = "اضغط  للتخطي"
+
+[node name="Wallpaper1" type="Node2D" parent="."]
+
+[node name="1LayerForest4" type="Sprite2D" parent="Wallpaper1"]
+self_modulate = Color(0.920995, 0.920995, 0.920995, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("3_g4rvl")
+
+[node name="1LayerForest5" type="Sprite2D" parent="Wallpaper1"]
+self_modulate = Color(0.920995, 0.920995, 0.920995, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("4_grw72")
+
+[node name="1LayerForest8" type="Sprite2D" parent="Wallpaper1"]
+self_modulate = Color(0.920995, 0.920995, 0.920995, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("5_7khlb")
+
+[node name="1LayerForest7" type="Sprite2D" parent="Wallpaper1"]
+self_modulate = Color(0.920995, 0.920995, 0.920995, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("6_xjmuu")
+
+[node name="1LayerForest6" type="Sprite2D" parent="Wallpaper1"]
+self_modulate = Color(0.920995, 0.920995, 0.920995, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("7_kn3y0")
+
+[node name="Wallpaper2" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="1LayerForest" type="Sprite2D" parent="Wallpaper2"]
+self_modulate = Color(0.525101, 0.525101, 0.525101, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("8_efoyc")
+
+[node name="1LayerForest2" type="Sprite2D" parent="Wallpaper2"]
+self_modulate = Color(0.525101, 0.525101, 0.525101, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("9_ud5om")
+
+[node name="1LayerForest3" type="Sprite2D" parent="Wallpaper2"]
+self_modulate = Color(0.525101, 0.525101, 0.525101, 1)
+texture_filter = 1
+position = Vector2(653, 369)
+scale = Vector2(3, 3)
+texture = ExtResource("10_yy8fi")
+
+[node name="Enemys" type="Node2D" parent="."]
+
+[node name="Enemy" type="Sprite2D" parent="Enemys"]
+texture_filter = 1
+position = Vector2(1780, 445)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 205
+
+[node name="Enemy2" type="Sprite2D" parent="Enemys"]
+texture_filter = 1
+position = Vector2(1930, 411)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 205
+
+[node name="Enemy3" type="Sprite2D" parent="Enemys"]
+texture_filter = 1
+position = Vector2(1991, 544)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 205
+
+[node name="Enemy4" type="Sprite2D" parent="Enemys"]
+texture_filter = 1
+position = Vector2(1855, 543)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 205
+
+[node name="Garden" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(443, 883)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 214
+
+[node name="Father(TheKing" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-205, 605)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 211
+
+[node name="pepole2" type="Node2D" parent="."]
+position = Vector2(380, -334)
+rotation = 0.00479984
+
+[node name="Pepole" type="Sprite2D" parent="pepole2"]
+texture_filter = 1
+position = Vector2(-515, 1138)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 196
+
+[node name="Pepole5" type="Sprite2D" parent="pepole2"]
+self_modulate = Color(0.929529, 0.929393, 0.932455, 1)
+texture_filter = 1
+position = Vector2(-710, 1219)
+scale = Vector2(13, 13)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 196
+
+[node name="Pepole4" type="Sprite2D" parent="pepole2"]
+self_modulate = Color(0.821356, 0.409385, 0.833451, 1)
+texture_filter = 1
+position = Vector2(-627, 1126)
+scale = Vector2(13, 13)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 217
+
+[node name="Pepole2" type="Sprite2D" parent="pepole2"]
+texture_filter = 1
+position = Vector2(-638, 1227)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 217
+
+[node name="Pepole3" type="Sprite2D" parent="pepole2"]
+self_modulate = Color(0.7577, 0.667019, 0.790641, 1)
+texture_filter = 1
+position = Vector2(-533, 1270)
+scale = Vector2(13, 13)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 217
+
+[node name="pepole3" type="Node2D" parent="."]
+position = Vector2(1839, -215)
+rotation = 0.00479984
+
+[node name="Pepole" type="Sprite2D" parent="pepole3"]
+texture_filter = 1
+position = Vector2(-360.448, 973.354)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 196
+
+[node name="Pepole5" type="Sprite2D" parent="pepole3"]
+self_modulate = Color(0.929529, 0.929393, 0.932455, 1)
+texture_filter = 1
+position = Vector2(-555.448, 1054.35)
+scale = Vector2(13, 13)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 196
+
+[node name="Pepole4" type="Sprite2D" parent="pepole3"]
+self_modulate = Color(0.821356, 0.409385, 0.833451, 1)
+texture_filter = 1
+position = Vector2(-472.448, 961.354)
+scale = Vector2(13, 13)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 217
+
+[node name="Pepole2" type="Sprite2D" parent="pepole3"]
+texture_filter = 1
+position = Vector2(-483.448, 1062.35)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 217
+
+[node name="Pepole3" type="Sprite2D" parent="pepole3"]
+self_modulate = Color(0.3327, 0.649624, 0.72647, 1)
+texture_filter = 1
+position = Vector2(-378.448, 1105.35)
+scale = Vector2(13, 13)
+texture = ExtResource("11_dbqoc")
+flip_h = true
+hframes = 32
+vframes = 32
+frame = 217
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -140.0
+offset_top = -95.0
+offset_right = 1398.0
+offset_bottom = 767.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u8wob")
+
+[node name="Player" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(610, 365)
+scale = Vector2(16, 16)
+texture = ExtResource("11_dbqoc")
+hframes = 32
+vframes = 32
+frame = 193
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_m1tjv")
+autoplay = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/Control/Escape the Story btn" to="." method="_on_escape_the_story_btn_pressed"]

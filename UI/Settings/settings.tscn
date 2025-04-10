@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddp2js4dwrnm4"]
+
+[ext_resource type="FontFile" uid="uid://d004wkqed5jpe" path="res://Fonts/PixelAE-Regular.ttf" id="1_xmvbb"]
+[ext_resource type="Script" path="res://Scripts/Global/settings.gd" id="2_wfrc0"]
+
+[sub_resource type="Theme" id="Theme_3ca3n"]
+default_font = ExtResource("1_xmvbb")
+default_font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_jggc6"]
+font = ExtResource("1_xmvbb")
+font_size = 90
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3ca3n")
+script = ExtResource("2_wfrc0")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.803922)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.5
+offset_top = -289.0
+offset_right = 195.5
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GameVersion" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "اعدادات ⚙️"
+label_settings = SubResource("LabelSettings_jggc6")
+
+[node name="Fullscreen" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+button_pressed = true
+text = "شاشة كاملة"
+flat = true
+
+[node name="Volume" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+button_pressed = true
+text = "الأصوات"
+flat = true
+
+[node name="CheckBox" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "تحكم الهاتف"
+flat = true
+
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "عودة ❌"
+flat = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]

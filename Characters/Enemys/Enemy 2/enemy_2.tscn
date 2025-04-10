@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmt4ffbgr32n"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/Enemys/Enemy 2/enemy_2.gd" id="1_ycwln"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hilvu"]
+radius = 4.0
+height = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vutfp"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xk2cj"]
+radius = 300.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rdfiq"]
+radius = 4.1
+
+[node name="enemy_2" type="CharacterBody2D" groups=["Enemys"]]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_ycwln")
+
+[node name="Sprite2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_hilvu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vutfp")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xk2cj")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_rdfiq")
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

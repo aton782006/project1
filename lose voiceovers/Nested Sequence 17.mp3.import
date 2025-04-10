@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://18gi7rdxju68"
+path="res://.godot/imported/Nested Sequence 17.mp3-61ef8272e0302c60e3394bae4579abab.mp3str"
+
+[deps]
+
+source_file="res://lose voiceovers/Nested Sequence 17.mp3"
+dest_files=["res://.godot/imported/Nested Sequence 17.mp3-61ef8272e0302c60e3394bae4579abab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

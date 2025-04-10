@@ -1,0 +1,135 @@
+[gd_scene load_steps=19 format=3 uid="uid://nyvhksprt0ss"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/Enemys/Enemy 1/enemy_1.gd" id="1_vp6ls"]
+[ext_resource type="Texture2D" uid="uid://c3d8d3u01aewa" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Sprites/Farmer Story Sprites.png" id="2_5lk8t"]
+[ext_resource type="Script" path="res://Scripts/Global/FSM/FiniteStateMachine.gd" id="2_j2kye"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemys/Enemy 1/States/Idle.gd" id="3_2yj6e"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemys/Enemy 1/States/Flow.gd" id="4_imf5v"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemys/Enemy 1/States/Death.gd" id="6_3sah2"]
+[ext_resource type="Script" path="res://Scripts/Global/FSM/knock_back.gd" id="7_66pxo"]
+[ext_resource type="Script" path="res://Scripts/components/health_manager.gd" id="8_ov2sv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adfkr"]
+atlas = ExtResource("2_5lk8t")
+region = Rect2(208, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01u2r"]
+atlas = ExtResource("2_5lk8t")
+region = Rect2(192, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykwkp"]
+atlas = ExtResource("2_5lk8t")
+region = Rect2(208, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70ly6"]
+atlas = ExtResource("2_5lk8t")
+region = Rect2(224, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5skg"]
+atlas = ExtResource("2_5lk8t")
+region = Rect2(208, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n34fc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adfkr")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01u2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykwkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70ly6")
+}],
+"loop": true,
+"name": &"Flow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5skg")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wvxv"]
+size = Vector2(10.99, 2.43)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7u3ee"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8u5vg"]
+radius = 89.0505
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qqw4d"]
+radius = 5.1
+height = 16.1
+
+[node name="Enemy 1" type="CharacterBody2D" groups=["Enemys"]]
+script = ExtResource("1_vp6ls")
+
+[node name="Enemy_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_n34fc")
+animation = &"Death"
+
+[node name="shapCast2D" type="ShapeCast2D" parent="Enemy_animation"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_6wvxv")
+target_position = Vector2(0, 0)
+collision_mask = 2
+
+[node name="Enemy _ collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7u3ee")
+
+[node name="Flow area" type="Area2D" parent="."]
+
+[node name="FLOWING AREA" type="CollisionShape2D" parent="Flow area"]
+shape = SubResource("CircleShape2D_8u5vg")
+
+[node name="FSM" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_j2kye")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="FSM" node_paths=PackedStringArray("animator")]
+script = ExtResource("3_2yj6e")
+animator = NodePath("../../Enemy_animation")
+
+[node name="Flow" type="Node" parent="FSM" node_paths=PackedStringArray("animator")]
+script = ExtResource("4_imf5v")
+animator = NodePath("../../Enemy_animation")
+
+[node name="Death" type="Node" parent="FSM" node_paths=PackedStringArray("animator")]
+script = ExtResource("6_3sah2")
+animator = NodePath("../../Enemy_animation")
+
+[node name="KnockBack" type="Node" parent="FSM"]
+script = ExtResource("7_66pxo")
+
+[node name="Attack area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack area"]
+shape = SubResource("CapsuleShape2D_qqw4d")
+
+[node name="HealthManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_ov2sv")
+max_health = 5
+
+[connection signal="body_entered" from="Flow area" to="FSM/Idle" method="_on_flow_area_body_entered"]
+[connection signal="body_entered" from="Flow area" to="FSM/Flow" method="_on_flow_area_body_entered"]
+[connection signal="body_exited" from="Flow area" to="FSM/Idle" method="_on_flow_area_body_exited"]
+[connection signal="body_exited" from="Flow area" to="FSM/Flow" method="_on_flow_area_body_exited"]
+[connection signal="body_entered" from="Attack area" to="." method="_on_attack_area_body_entered"]
+[connection signal="took_damage" from="HealthManager" to="." method="_on_health_manager_took_damage"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4cvvv4g2bk5g"]
+
+[ext_resource type="Script" path="res://Levels/AudioManager.gd" id="1_c5gqj"]
+[ext_resource type="AudioStream" uid="uid://bv7cfrp3p62cq" path="res://Levels/Sequence 01 (2).wav" id="2_nblbq"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_c5gqj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nblbq")

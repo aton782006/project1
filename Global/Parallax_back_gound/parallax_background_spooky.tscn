@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://76qym1yxjpth"]
+
+[ext_resource type="Texture2D" uid="uid://yli0licm0oov" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Catle in the fog/1 Layer Castle in the fog.png" id="1_hqqwp"]
+[ext_resource type="Shader" path="res://Scripts/Global/sky.gdshader" id="2_q6ofo"]
+[ext_resource type="Texture2D" uid="uid://c5r3eh8wdub8w" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Catle in the fog/2 Layer Castle in the fog.png" id="3_jr643"]
+[ext_resource type="Texture2D" uid="uid://ceymu6sjpdold" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Catle in the fog/3 Layer Castle in the fog.png" id="4_vy4ij"]
+[ext_resource type="Texture2D" uid="uid://dp274hkrtvcdm" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Catle in the fog/4 Layer Castle in the fog.png" id="5_2twxm"]
+[ext_resource type="Texture2D" uid="uid://kkvv5cm348yx" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Catle in the fog/5 Layer Castle in the fog.png" id="6_y6u0d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i7574"]
+shader = ExtResource("2_q6ofo")
+shader_parameter/speed = 0.02
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_base_scale = Vector2(1, 1.05)
+scroll_limit_begin = Vector2(0.1, 0)
+
+[node name="BG1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(480, 0)
+
+[node name="1LayerNightSea" type="Sprite2D" parent="BG1"]
+texture = ExtResource("1_hqqwp")
+centered = false
+
+[node name="BG2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.3)
+motion_mirroring = Vector2(480, 0)
+
+[node name="4LayerNightSea2" type="Sprite2D" parent="BG2"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_i7574")
+texture = ExtResource("3_jr643")
+centered = false
+
+[node name="BG3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(480, 0)
+
+[node name="2LayerNightSea" type="Sprite2D" parent="BG3"]
+texture = ExtResource("4_vy4ij")
+centered = false
+
+[node name="BG4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(480, 0)
+
+[node name="3LayerNightSea" type="Sprite2D" parent="BG4"]
+texture = ExtResource("5_2twxm")
+centered = false
+
+[node name="BG5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="4LayerNightSea3" type="Sprite2D" parent="BG5"]
+texture = ExtResource("6_y6u0d")
+centered = false

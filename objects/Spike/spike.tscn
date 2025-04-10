@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c82j6abhbvg73"]
+
+[ext_resource type="Script" path="res://objects/Spike/spike.gd" id="1_rs75q"]
+
+[node name="spike" type="Area2D" groups=["spike"]]
+script = ExtResource("1_rs75q")
+
+[node name="MeshInstance2D" type="Polygon2D" parent="."]
+antialiased = true
+polygon = PackedVector2Array(-4, 0, 0, -10, 4, 0)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4, 0, 0, -10, 4, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

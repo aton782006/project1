@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgi2ihw3lag6p"]
+
+[ext_resource type="Script" path="res://Characters/Enemys/Enemy 2/throwobj.gd" id="1_a52le"]
+[ext_resource type="Shader" path="res://Scripts/Global/throwobj.gdshader" id="2_uo2ys"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gnjjn"]
+shader = ExtResource("2_uo2ys")
+shader_parameter/waveAmplitude = 0.703
+shader_parameter/waveFrequency = 10.0
+shader_parameter/verticalWave = false
+shader_parameter/waveSpeed = 4.0
+shader_parameter/firstHalf = 1.0
+shader_parameter/secondHalf = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_eniuw"]
+radius = 2.0
+height = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7u1hr"]
+radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qnk7s"]
+radius = 2.01
+
+[node name="throwobj" type="CharacterBody2D"]
+script = ExtResource("1_a52le")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_gnjjn")
+mesh = SubResource("SphereMesh_eniuw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_7u1hr")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qnk7s")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 32
+lifetime = 0.2
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 30.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,397 @@
+[gd_scene load_steps=21 format=3 uid="uid://bq188a7a8li6u"]
+
+[ext_resource type="Script" path="res://Global/main_menu.gd" id="1_cch23"]
+[ext_resource type="Texture2D" uid="uid://d0h15vxjrnu5j" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Night sea/1 Layer Night sea.png" id="1_rwfje"]
+[ext_resource type="Texture2D" uid="uid://cuuoakky7nwiv" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Night sea/4 Layer Night sea.png" id="2_o5fo4"]
+[ext_resource type="Texture2D" uid="uid://cq6ahlbnmvbh" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Night sea/2 Layer Night sea.png" id="3_8qi6y"]
+[ext_resource type="Texture2D" uid="uid://d0sjb2jikpyiv" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Night sea/3 Layer Night sea.png" id="4_fleys"]
+[ext_resource type="FontFile" uid="uid://boktctkbl7nt2" path="res://Fonts/PixelAE-Bold.ttf" id="6_n3246"]
+[ext_resource type="FontFile" uid="uid://d004wkqed5jpe" path="res://Fonts/PixelAE-Regular.ttf" id="7_pp0hm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ranbp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx6tc"]
+bg_color = Color(0.0312407, 0.521479, 0.191169, 1)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+shadow_color = Color(0, 0, 0, 0.768627)
+shadow_size = 8
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en4xm"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2crr"]
+bg_color = Color(0.0435064, 0.637467, 0.239935, 1)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+shadow_color = Color(0, 0, 0, 0.768627)
+shadow_size = 8
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yc8ik"]
+font = ExtResource("6_n3246")
+font_size = 85
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_58hae"]
+font = ExtResource("6_n3246")
+font_size = 94
+outline_size = 19
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jvjnx"]
+font = ExtResource("7_pp0hm")
+font_size = 30
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgybk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_fv01c"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333334, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0mplf"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kydx1"]
+resource_name = "FirstJoinGame"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 2.36667, 3.43333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScreen/BlackScreenTexts/GameName:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 1.46667, 2.33333, 3.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen/BlackScreenTexts/GameName/GameName2:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0666667, 1.46667, 2.3, 3.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wfvya"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScreen/BlackScreenTexts/GameName:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen/BlackScreenTexts/GameName/GameName2:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r3d7u"]
+_data = {
+"FadeIn": SubResource("Animation_fv01c"),
+"FadeOut": SubResource("Animation_0mplf"),
+"FirstJoinGame": SubResource("Animation_kydx1"),
+"RESET": SubResource("Animation_wfvya")
+}
+
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("Anim", "BlackScreen", "BlackScreenTexts")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_cch23")
+Anim = NodePath("AnimationPlayer")
+BlackScreen = NodePath("BlackScreen")
+BlackScreenTexts = NodePath("BlackScreen/BlackScreenTexts")
+metadata/_edit_vertical_guides_ = [218.0]
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+
+[node name="Parallax2D" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(100000, 0)
+
+[node name="1LayerNightSea" type="Sprite2D" parent="Background/ParallaxBackground/Parallax2D"]
+position = Vector2(630, 358)
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("1_rwfje")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="4LayerNightSea2" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer"]
+position = Vector2(624, 358)
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("2_o5fo4")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.35)
+
+[node name="2LayerNightSea" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer2"]
+position = Vector2(631, 358)
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("3_8qi6y")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.45)
+
+[node name="3LayerNightSea" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer3"]
+position = Vector2(631, 358)
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("4_fleys")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.7)
+
+[node name="4LayerNightSea" type="Sprite2D" parent="Background/ParallaxBackground/ParallaxLayer4"]
+position = Vector2(631, 358)
+scale = Vector2(2.7, 2.7)
+texture = ExtResource("2_o5fo4")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -84.0
+offset_top = 248.0
+offset_right = 469.0
+offset_bottom = 391.0
+theme_override_colors/font_hover_pressed_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("6_n3246")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/focus = SubResource("StyleBoxFlat_ranbp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rx6tc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_en4xm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2crr")
+text = "        لعب جديد"
+alignment = 2
+
+[node name="continueButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -68.0
+offset_top = 411.0
+offset_right = 344.0
+offset_bottom = 492.0
+theme_override_colors/font_hover_pressed_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("6_n3246")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/focus = SubResource("StyleBoxFlat_ranbp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rx6tc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_en4xm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2crr")
+text = "      اكمال اللعب"
+alignment = 2
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -85.0
+offset_top = 508.0
+offset_right = 263.0
+offset_bottom = 570.0
+theme_override_colors/font_hover_pressed_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("6_n3246")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/focus = SubResource("StyleBoxFlat_ranbp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rx6tc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_en4xm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2crr")
+text = "       الأعدادات"
+alignment = 2
+
+[node name="SettingsButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = -155.0
+offset_top = 591.0
+offset_right = 193.0
+offset_bottom = 653.0
+theme_override_colors/font_hover_pressed_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("6_n3246")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/focus = SubResource("StyleBoxFlat_ranbp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rx6tc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_en4xm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2crr")
+text = "       !         "
+alignment = 2
+
+[node name="GameName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 16.0
+offset_right = 1185.0
+offset_bottom = 166.0
+scale = Vector2(0.915, 0.915)
+text = "مهمة الفارس"
+label_settings = SubResource("LabelSettings_yc8ik")
+
+[node name="GameName2" type="Label" parent="GameName"]
+layout_mode = 0
+offset_left = -194.0
+offset_top = 125.0
+offset_right = 502.0
+offset_bottom = 266.0
+scale = Vector2(0.915, 0.915)
+text = "في انقاذ الحارس"
+label_settings = SubResource("LabelSettings_58hae")
+
+[node name="GameVersion" type="Label" parent="."]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 579.0
+offset_right = 1157.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 7
+text = " # تم تطوير وبرمجة هذه اللعبة بواسطة 50 مطور في 50 يوم #"
+label_settings = SubResource("LabelSettings_jvjnx")
+
+[node name="BlackScreen" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rgybk")
+metadata/_edit_use_anchors_ = true
+
+[node name="BlackScreenTexts" type="Panel" parent="BlackScreen"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="GameName" type="Label" parent="BlackScreen/BlackScreenTexts"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -53.5
+offset_right = 176.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "مهمة الفارس"
+label_settings = SubResource("LabelSettings_yc8ik")
+
+[node name="GameName2" type="Label" parent="BlackScreen/BlackScreenTexts/GameName"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -102.5
+offset_top = 109.0
+offset_right = 593.5
+offset_bottom = 250.0
+text = "في انقاذ الحارس"
+label_settings = SubResource("LabelSettings_58hae")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r3d7u")
+}
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="SettingsButton2" to="." method="_on_settings_button_2_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

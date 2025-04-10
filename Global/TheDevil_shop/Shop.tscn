@@ -1,0 +1,270 @@
+[gd_scene load_steps=27 format=3 uid="uid://b2qnsuf6fnkp4"]
+
+[ext_resource type="Texture2D" uid="uid://doq3thgpd3hb7" path="res://Assets/tile_0115.png" id="1_1vvxe"]
+[ext_resource type="Script" path="res://Scripts/TheDevil_shop/shop.gd" id="1_py8d6"]
+[ext_resource type="Texture2D" uid="uid://c7hq4qxhr6rg5" path="res://Global/TheDevil_shop/backback 1.png" id="2_myo06"]
+[ext_resource type="Texture2D" uid="uid://u0geav4j6ta1" path="res://Global/TheDevil_shop/backback 2.png" id="3_edwjr"]
+[ext_resource type="LabelSettings" uid="uid://b68mhdb1sn8ie" path="res://materials/font.tres" id="4_te6ap"]
+[ext_resource type="FontFile" uid="uid://bk575460p4byp" path="res://dev25/arfonts-ah-manal-black.ttf" id="6_4itb1"]
+[ext_resource type="FontFile" uid="uid://boktctkbl7nt2" path="res://Fonts/PixelAE-Bold.ttf" id="6_qoc75"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca8vj"]
+bg_color = Color(1, 0, 0, 0.337255)
+
+[sub_resource type="LabelSettings" id="LabelSettings_arygr"]
+font = ExtResource("6_qoc75")
+font_size = 500
+font_color = Color(0.800102, 0.0854521, 0, 1)
+outline_size = 120
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3es4y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7eb2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_454h8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88se2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uym5u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_4yf5x"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.454902, 0.454902, 0.454902, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.0701524, 0.0701524, 0.0701524, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("6_4itb1")
+Button/styles/disabled = SubResource("StyleBoxFlat_3es4y")
+Button/styles/focus = SubResource("StyleBoxFlat_w7eb2")
+Button/styles/hover = SubResource("StyleBoxFlat_454h8")
+Button/styles/normal = SubResource("StyleBoxFlat_88se2")
+Button/styles/pressed = SubResource("StyleBoxFlat_uym5u")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_58l7r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynrew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rl8eq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_80kt8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xek5p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d51wk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbiqs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32fox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j628o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjt5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iv460"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -103.0
+offset_right = -556.0
+offset_bottom = -429.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_py8d6")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 471.0
+offset_right = 504.0
+offset_bottom = 33.0
+scale = Vector2(3.31376, 2.89571)
+texture_normal = ExtResource("2_myo06")
+texture_pressed = ExtResource("3_edwjr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_right = 101.0
+offset_bottom = 29.0
+scale = Vector2(11.8, 7.88)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca8vj")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 0.677966
+offset_top = 1.01523
+offset_right = 33.678
+offset_bottom = 6.01523
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 12.5424
+offset_top = 1.39594
+offset_right = 147.542
+offset_bottom = 76.3959
+scale = Vector2(0.05, 0.05)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_qoc75")
+theme_override_font_sizes/font_size = 30
+text = "المتجر"
+
+[node name="Button" type="Button" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 32.8136
+offset_top = -4.56853
+offset_right = 49.8136
+offset_bottom = 26.4315
+scale = Vector2(0.181177, 0.152731)
+text = "x"
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 2.20339
+offset_top = 12.8173
+offset_right = 32.2034
+offset_bottom = 22.8173
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.32203
+offset_top = 1.467
+offset_right = 17.322
+offset_bottom = 17.467
+scale = Vector2(0.285052, 0.467218)
+texture = ExtResource("1_1vvxe")
+
+[node name="PriceLabel" type="Label" parent="Panel/Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 894.0
+offset_bottom = 791.0
+scale = Vector2(0.005, 0.005)
+text = "20$"
+label_settings = ExtResource("4_te6ap")
+
+[node name="Label2" type="Label" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 5.72881
+offset_top = 5.0203
+offset_right = 78.7288
+offset_bottom = 28.0203
+scale = Vector2(0.003, 0.003)
+text = "قنينه الدواء"
+label_settings = ExtResource("4_te6ap")
+
+[node name="Label3" type="Label" parent="Panel/Panel2"]
+visible = false
+layout_mode = 0
+offset_left = 5.22034
+offset_top = 1.97462
+offset_right = 165.22
+offset_bottom = 24.9746
+scale = Vector2(0.003, 0.003)
+theme_override_colors/font_color = Color(0.868069, 5.19812e-06, 5.77569e-07, 1)
+text = " انت لا تملك المال الكافي !"
+label_settings = SubResource("LabelSettings_arygr")
+
+[node name="sell" type="Button" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 24.5763
+offset_top = 4.31468
+offset_right = 914.576
+offset_bottom = 571.315
+scale = Vector2(0.003, 0.003)
+theme = SubResource("Theme_4yf5x")
+theme_override_font_sizes/font_size = 600
+theme_override_styles/focus = SubResource("StyleBoxEmpty_58l7r")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ynrew")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rl8eq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_80kt8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xek5p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_d51wk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pbiqs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_32fox")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j628o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wjt5f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iv460")
+text = "شراء"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Panel/Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Panel2/sell" to="." method="_on_sell_pressed"]

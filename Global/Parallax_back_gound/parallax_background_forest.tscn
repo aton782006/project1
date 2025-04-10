@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqb22svpdoama"]
+
+[ext_resource type="Texture2D" uid="uid://vpirmnqm4a06" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/1 Layer Field.png" id="1_mp8m3"]
+[ext_resource type="Texture2D" uid="uid://biyqtk42hp48t" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/2 Layer Field.png" id="2_1hrvt"]
+[ext_resource type="Shader" path="res://Scripts/Global/sky.gdshader" id="2_fmgjf"]
+[ext_resource type="Texture2D" uid="uid://dvruesixvtkp0" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/3 Layer Field.png" id="3_npmku"]
+[ext_resource type="Texture2D" uid="uid://w0xlg2gcem17" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/4 Layer Field.png" id="4_voq38"]
+[ext_resource type="Texture2D" uid="uid://b0f50e1psql6o" path="res://Assets/Farmer Story Asset and Backgrounds v2/Farmer Story Backgrounds/Field/6 Layer Field.png" id="6_yqxub"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i7574"]
+shader = ExtResource("2_fmgjf")
+shader_parameter/speed = 0.02
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_base_scale = Vector2(1, 1.05)
+scroll_limit_begin = Vector2(0.1, 0)
+
+[node name="BG1" type="ParallaxLayer" parent="."]
+texture_filter = 1
+position = Vector2(2, -2)
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(480, 0)
+
+[node name="1LayerNightSea" type="Sprite2D" parent="BG1"]
+texture_filter = 1
+texture = ExtResource("1_mp8m3")
+centered = false
+
+[node name="BG2" type="ParallaxLayer" parent="."]
+texture_filter = 1
+position = Vector2(2, -2)
+motion_scale = Vector2(0.2, 0.3)
+motion_mirroring = Vector2(480, 0)
+
+[node name="4LayerNightSea2" type="Sprite2D" parent="BG2"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_i7574")
+texture = ExtResource("2_1hrvt")
+centered = false
+
+[node name="BG3" type="ParallaxLayer" parent="."]
+texture_filter = 1
+position = Vector2(2, -2)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(480, 0)
+
+[node name="2LayerNightSea" type="Sprite2D" parent="BG3"]
+texture_filter = 1
+texture = ExtResource("3_npmku")
+centered = false
+
+[node name="BG4" type="ParallaxLayer" parent="."]
+texture_filter = 1
+position = Vector2(2, -2)
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(480, 0)
+
+[node name="3LayerNightSea" type="Sprite2D" parent="BG4"]
+texture_filter = 1
+texture = ExtResource("4_voq38")
+centered = false
+
+[node name="BG5" type="ParallaxLayer" parent="."]
+texture_filter = 1
+position = Vector2(2, -2)
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="4LayerNightSea3" type="Sprite2D" parent="BG5"]
+texture_filter = 1
+texture = ExtResource("6_yqxub")
+centered = false
+
+[node name="BG6" type="ParallaxLayer" parent="."]
+texture_filter = 1
+position = Vector2(2, -2)
+motion_scale = Vector2(0.85, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="4LayerNightSea3" type="Sprite2D" parent="BG6"]
+texture_filter = 1
+texture = ExtResource("6_yqxub")
+centered = false
